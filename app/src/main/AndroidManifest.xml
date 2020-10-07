@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="comp3350.ei">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.inventory.InventoryActivity"
+            android:label="@string/title_activity_inventory">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.inventory.AddProductActivity"
+            android:label="@string/title_activity_add_product">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.inventory.InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.inventory.ProductActivity"
+            android:label="@string/title_activity_product">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.inventory.InventoryActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.inventory.EditProductActivity"
+            android:label="@string/title_activity_edit_product">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.inventory.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.orders.OrdersActivity"
+            android:label="@string/title_activity_orders">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.orders.OrderInActivity"
+            android:label="@string/title_activity_order_in">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.orders.OrdersActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.orders.OrderOutActivity"
+            android:label="@string/title_activity_order_out">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ei.presentation.orders.OrdersActivity" />
+        </activity>
+
+        <activity
+            android:name=".presentation.Messages"
+            android:theme="@style/MyDialogStyle" />
+
+        <activity
+            android:name=".presentation.orders.AddItemActivity"
+            android:label="choose ordered items" />
+
+        <activity
+            android:name=".presentation.orders.ViewOrderActivity"
+            android:label="Order detail" />
+
+
+        <activity
+            android:name=".presentation.orders.AskQuantity"
+            android:theme="@style/MyDialogStyle"
+            android:label="enter ordered quantity" />
+
+  </application>
+
+</manifest>

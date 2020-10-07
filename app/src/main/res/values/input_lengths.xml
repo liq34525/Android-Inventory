@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Input field maximums -->
+    <integer name="edit_product_name_max">20</integer>
+    <integer name="edit_product_category_max">40</integer>
+    <integer name="edit_product_description_max">200</integer>
+    <integer name="edit_product_unit_max">10</integer>
+
+</resources>
